@@ -1,6 +1,6 @@
 #include "ArbolP.h"
 
-ArbolP::ArbolP(std::vector<int> orig)
+ArbolP::ArbolP(int orig)
 {
 	this->Raiz = new NodoA(orig);
 }
@@ -93,12 +93,21 @@ NodoA* ArbolP::BusqRec(std::vector<int> ref, NodoA* aux)
 	return NULL;
 }
 
-
-void ArbolP::Creararbol(std::vector<int> Raiz)
+void ArbolP::Creararbol(std::vector<int> aux)
 {
-	if(this->Raiz.empty())
+	if(this->Raiz->empty())
 	{
-		std::count<<"EL ARBOL NO TIENE RAIZ"<<std::endl;
+		this->Raiz=new NodoA(aux);
+		std::cout<<"No existen elementos en el arbol"<<std::endl;
+		return;
 	}
-	AddNodo// AQUI ES DONDE AGREGAMOS NODOS NO ?
+	AddNodo(2,Raiz);
+	AddNodo(3,Raiz);
+	AddNodo(4,2);
+	AddNodo(5,2);
+	AddNodo(9,5);
+	AddNodo(8,5);
+	AddNodo(6,3);
+	AddNodo(7,3);
+	AddNodo(10,3);	
 }

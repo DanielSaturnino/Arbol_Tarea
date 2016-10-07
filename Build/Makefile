@@ -103,24 +103,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Arbol_Puzzel
+# Target rules for targets named Arbol_Tarea
 
 # Build rule for target.
-Arbol_Puzzel: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Arbol_Puzzel
-.PHONY : Arbol_Puzzel
+Arbol_Tarea: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Arbol_Tarea
+.PHONY : Arbol_Tarea
 
 # fast build rule for target.
-Arbol_Puzzel/fast:
-	$(MAKE) -f CMakeFiles/Arbol_Puzzel.dir/build.make CMakeFiles/Arbol_Puzzel.dir/build
-.PHONY : Arbol_Puzzel/fast
+Arbol_Tarea/fast:
+	$(MAKE) -f CMakeFiles/Arbol_Tarea.dir/build.make CMakeFiles/Arbol_Tarea.dir/build
+.PHONY : Arbol_Tarea/fast
 
 src/ArbolP.o: src/ArbolP.cpp.o
 .PHONY : src/ArbolP.o
 
 # target to build an object file
 src/ArbolP.cpp.o:
-	$(MAKE) -f CMakeFiles/Arbol_Puzzel.dir/build.make CMakeFiles/Arbol_Puzzel.dir/src/ArbolP.cpp.o
+	$(MAKE) -f CMakeFiles/Arbol_Tarea.dir/build.make CMakeFiles/Arbol_Tarea.dir/src/ArbolP.cpp.o
 .PHONY : src/ArbolP.cpp.o
 
 src/ArbolP.i: src/ArbolP.cpp.i
@@ -128,7 +128,7 @@ src/ArbolP.i: src/ArbolP.cpp.i
 
 # target to preprocess a source file
 src/ArbolP.cpp.i:
-	$(MAKE) -f CMakeFiles/Arbol_Puzzel.dir/build.make CMakeFiles/Arbol_Puzzel.dir/src/ArbolP.cpp.i
+	$(MAKE) -f CMakeFiles/Arbol_Tarea.dir/build.make CMakeFiles/Arbol_Tarea.dir/src/ArbolP.cpp.i
 .PHONY : src/ArbolP.cpp.i
 
 src/ArbolP.s: src/ArbolP.cpp.s
@@ -136,7 +136,7 @@ src/ArbolP.s: src/ArbolP.cpp.s
 
 # target to generate assembly for a file
 src/ArbolP.cpp.s:
-	$(MAKE) -f CMakeFiles/Arbol_Puzzel.dir/build.make CMakeFiles/Arbol_Puzzel.dir/src/ArbolP.cpp.s
+	$(MAKE) -f CMakeFiles/Arbol_Tarea.dir/build.make CMakeFiles/Arbol_Tarea.dir/src/ArbolP.cpp.s
 .PHONY : src/ArbolP.cpp.s
 
 src/NodoA.o: src/NodoA.cpp.o
@@ -144,7 +144,7 @@ src/NodoA.o: src/NodoA.cpp.o
 
 # target to build an object file
 src/NodoA.cpp.o:
-	$(MAKE) -f CMakeFiles/Arbol_Puzzel.dir/build.make CMakeFiles/Arbol_Puzzel.dir/src/NodoA.cpp.o
+	$(MAKE) -f CMakeFiles/Arbol_Tarea.dir/build.make CMakeFiles/Arbol_Tarea.dir/src/NodoA.cpp.o
 .PHONY : src/NodoA.cpp.o
 
 src/NodoA.i: src/NodoA.cpp.i
@@ -152,7 +152,7 @@ src/NodoA.i: src/NodoA.cpp.i
 
 # target to preprocess a source file
 src/NodoA.cpp.i:
-	$(MAKE) -f CMakeFiles/Arbol_Puzzel.dir/build.make CMakeFiles/Arbol_Puzzel.dir/src/NodoA.cpp.i
+	$(MAKE) -f CMakeFiles/Arbol_Tarea.dir/build.make CMakeFiles/Arbol_Tarea.dir/src/NodoA.cpp.i
 .PHONY : src/NodoA.cpp.i
 
 src/NodoA.s: src/NodoA.cpp.s
@@ -160,7 +160,7 @@ src/NodoA.s: src/NodoA.cpp.s
 
 # target to generate assembly for a file
 src/NodoA.cpp.s:
-	$(MAKE) -f CMakeFiles/Arbol_Puzzel.dir/build.make CMakeFiles/Arbol_Puzzel.dir/src/NodoA.cpp.s
+	$(MAKE) -f CMakeFiles/Arbol_Tarea.dir/build.make CMakeFiles/Arbol_Tarea.dir/src/NodoA.cpp.s
 .PHONY : src/NodoA.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -168,7 +168,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/Arbol_Puzzel.dir/build.make CMakeFiles/Arbol_Puzzel.dir/src/main.cpp.o
+	$(MAKE) -f CMakeFiles/Arbol_Tarea.dir/build.make CMakeFiles/Arbol_Tarea.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -176,7 +176,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/Arbol_Puzzel.dir/build.make CMakeFiles/Arbol_Puzzel.dir/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/Arbol_Tarea.dir/build.make CMakeFiles/Arbol_Tarea.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -184,7 +184,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/Arbol_Puzzel.dir/build.make CMakeFiles/Arbol_Puzzel.dir/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/Arbol_Tarea.dir/build.make CMakeFiles/Arbol_Tarea.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -193,7 +193,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... Arbol_Puzzel"
+	@echo "... Arbol_Tarea"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... src/ArbolP.o"

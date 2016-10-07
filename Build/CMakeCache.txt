@@ -20,6 +20,12 @@ Arbol_Puzzel_BINARY_DIR:STATIC=/home/daniel/Documentos/Arbol_Tarea/Build
 //Value Computed by CMake
 Arbol_Puzzel_SOURCE_DIR:STATIC=/home/daniel/Documentos/Arbol_Tarea
 
+//Value Computed by CMake
+Arbol_Tarea_BINARY_DIR:STATIC=/home/daniel/Documentos/Arbol_Tarea/Build
+
+//Value Computed by CMake
+Arbol_Tarea_SOURCE_DIR:STATIC=/home/daniel/Documentos/Arbol_Tarea
+
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
@@ -120,7 +126,7 @@ CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
 CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Arbol_Puzzel
+CMAKE_PROJECT_NAME:STATIC=Arbol_Tarea
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib

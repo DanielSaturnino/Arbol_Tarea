@@ -1,4 +1,5 @@
 #include "ArbolP.h"
+#include <stack>
 ArbolP::ArbolP(int Dato)
 {
 	this->Raiz=Nodo(Dato);
@@ -61,7 +62,6 @@ Nodo* Arbolp::BuscarNodo(int ref)
 Nodo* Arbolp::BusqRec(int ref,Nodo* aux)
 {
 	Nodo* Res;
-	Nodo* Busq=aux;
 	if(aux.getDato()==ref)
 	{
 		return aux;

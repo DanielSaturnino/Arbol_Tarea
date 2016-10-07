@@ -1,0 +1,1 @@
+/home/daniel/Documentos/Arbol_Tarea/Build/CMakeFiles/Arbol_Puzzel.dir

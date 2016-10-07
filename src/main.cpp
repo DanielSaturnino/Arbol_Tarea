@@ -28,5 +28,8 @@ int main()
 
 	std::cout<<arbol.AddNodo(o,p)<<std::endl;
 */
+	ArbolP A(1);
+	A.Creararbol(1);
+	A.imprimir();
 	return 0;
 }

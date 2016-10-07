@@ -1,5 +1,5 @@
 #include "ArbolP.h"
-#include <stack>
+
 ArbolP::ArbolP(int Dato)
 {
 	this->Raiz= new NodoA(Dato);
@@ -102,4 +102,24 @@ void ArbolP::Creararbol(int Raiz)
 	AddNodo(6,3);
 	AddNodo(7,3);
 	AddNodo(10,3);
+}
+void ArbolP::imprimir()
+{
+		
+	if (Raiz==NULL)
+	{
+		std::cout<<"NO HAY NINGUN ELEMENTO "<<std::endl;
+	}
+	std::cout<<Raiz->getDato()<<std::endl;
+	return imprimirRec(Raiz);
+
+}
+void ArbolP::imprimirRec(NodoA* aux)
+{
+	NodoA* a=aux;
+	for(int i=0;i<a->Hijos.size();++i)
+	{
+		std::cout<<a->Hijos[i]->getDato()<<std::endl;
+		imprimirRec(a->Hijos[i]);
+	}
 }

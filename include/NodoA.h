@@ -9,5 +9,5 @@ public:
 	NodoA* Padre;
 	NodoA(int Dato);
 	NodoA(int Dato , NodoA* padre);
-	int getDato();;
+	int getDato();
 };

@@ -46,7 +46,7 @@ bool ArbolP::ElimNodo(int ref)
 	{
 		if(aux==aux->Padre->Hijos[i])
 		{
-			aux->Padre->Hijos.pop_back(aux);
+			aux->Padre->Hijos.pop_back();
 		}
 	}
 }

@@ -2,7 +2,7 @@
 
 int main()
 {
-	std::vector<int> o;
+	/*std::vector<int> o;
 	for (int i = 1; i < 9; ++i)
 	{
 		o.push_back(i);
@@ -27,6 +27,6 @@ int main()
 	
 
 	std::cout<<arbol.AddNodo(o,p)<<std::endl;
-
+*/
 	return 0;
 }

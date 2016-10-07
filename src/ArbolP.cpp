@@ -40,7 +40,7 @@ bool ArbolP::ElimNodo(int ref)
 		aux->Padre->Hijos.push_back(aux->Hijos[i]);
 		aux->Hijos[i]->Padre =aux->Padre;
 	}
-	aux->Hijos.erase(aux->Hijos.begin(),aux->Hijos.begin()+i);
+	aux->Hijos.erase(aux->Hijos.begin(),aux->Hijos.end());
 	aux->Padre=NULL;
 	for (int i = 0; i < aux->Padre->Hijos.size(); ++i)
 	{

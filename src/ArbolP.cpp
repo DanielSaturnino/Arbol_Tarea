@@ -1,25 +1,25 @@
 #include "ArbolP.h"
-#include <stack>
+
 ArbolP::ArbolP(int Dato)
 {
-	this->Raiz=Nodo(Dato);
+	this->Raiz= new NodoA(Dato);
 }
 bool ArbolP::AddNodo(int Dato,int ref)
 {
 	if(Raiz==NULL)
 	{
-		Raiz=Nodo(Dato);
+		this->Raiz= new NodoA(Dato);
 		std::cout<<"El arbol esta vacio se agrego el elemento sin considerar referenecia"<<std::endl;
 		return true;
 	}
-	Nodo* Padre=new BusqNodo(ref);
+	NodoA* Padre=BusqNodo(ref);
 	if(Padre==NULL)
 	{
 		std::cout<<"no existe la referencia"<<std::endl;
 		return false;
 	}else
 	{
-	 	Nodo* hijo =Nodo(Dato,Padre);
+	 	NodoA* hijo = new NodoA(Dato,Padre);
 	 	Padre->Hijos.push_back(hijo);
 	}
 	return true;
@@ -30,49 +30,49 @@ bool ArbolP::ElimNodo(int ref)
 	{
 		std::cout<<"No existe el valor en el arbol"<<std::endl;
 	}
-	Nodo* aux=new BusqNodo(ref);
+	NodoA* aux= BusqNodo(ref);
 	if (aux==NULL)
 	{
 		std::cout<<"No existe la Referencia"<<std::endl;
 	}
 	for(int i=0;i<aux->Hijos.size();i++)
 	{
-		aux->Padre.Hijos.push_back(aux->Hijos[i]);
-		aux.Hijos[i].setPadre(aux->Padre);
+		aux->Padre->Hijos.push_back(aux->Hijos[i]);
+		aux->Hijos[i]->Padre =aux->Padre;
 	}
-	aux->Hijos.erase(Hijos.begin(),Hijos.begin()+i);
+	aux->Hijos.erase(aux->Hijos.begin(),aux->Hijos.end());
 	aux->Padre=NULL;
-	for (int i = 0; i < aux->Padre.Hijos.size(); ++i)
+	for (int i = 0; i < aux->Padre->Hijos.size(); ++i)
 	{
-		if(aux==aux->Padre.Hijos[i])
+		if(aux==aux->Padre->Hijos[i])
 		{
-			aux->Padre.Hijos.pop_back(aux);
+			aux->Padre->Hijos.pop_back();
 		}
 	}
 }
-Nodo* Arbolp::BuscarNodo(int ref)
+NodoA* ArbolP::BusqNodo(int ref)
 {
 	if (Raiz==NULL)
 	{
-		std:cout<<"NO HAY NINGUN ELEMENTO "<<std::endl;
+		std::cout<<"NO HAY NINGUN ELEMENTO "<<std::endl;
 		return NULL;
 	}
 	return  BusqRec(ref,Raiz);
 }
-Nodo* Arbolp::BusqRec(int ref,Nodo* aux)
+NodoA* ArbolP::BusqRec(int ref,NodoA* aux)
 {
-	Nodo* Res;
-	if(aux.getDato()==ref)
+	NodoA* Res;
+	if(aux->getDato()==ref)
 	{
 		return aux;
 	}
-	if (Hijos.empty())
+	if (aux->Hijos.empty())
 	{
 		return NULL;
 	}
-	for (int i = 0; i < Hijos.length(); ++i)
+	for (int i = 0; i < aux->Hijos.size(); ++i)
 	{
-		Res=BusqRec(Ref,Hijos[i]);
+		Res=BusqRec(ref,aux->Hijos[i]);
 	}
 	if(Res!=NULL)
 	{
@@ -82,24 +82,57 @@ Nodo* Arbolp::BusqRec(int ref,Nodo* aux)
 }
 std::stack<NodoA*> ArbolP::Camino(NodoA* aux)
 {
-	stack<Nodo*> Camino;
+	std::stack<NodoA*> Camino;
 	while(aux!=Raiz)
 	{
 		Camino.push(aux);
 		aux=aux->Padre;
 	}
 	return Camino;
-}
+}  
 
-void ArbolP::Creararbol(int Raiz)
+void ArbolP::Creararbol(int aux)
 {
-	AddNodo(2,Raiz);
-	AddNodo(3,Raiz);
+	aux=this->Raiz->getDato();
+	Crearizq(aux);
+	Crearder(aux);
+	
+	
+}
+void ArbolP::Crearizq(int Dato)
+{
+	AddNodo(2,Dato);
 	AddNodo(4,2);
 	AddNodo(5,2);
 	AddNodo(9,5);
 	AddNodo(8,5);
+
+}
+void ArbolP::Crearder(int Dato)
+{
+	AddNodo(3,Dato);
 	AddNodo(6,3);
 	AddNodo(7,3);
 	AddNodo(10,3);
+}
+void ArbolP::imprimir()
+{
+		
+	if (Raiz==NULL)
+	{
+		std::cout<<"NO HAY NINGUN ELEMENTO "<<std::endl;
+	}
+	std::cout<<Raiz->getDato()<<std::endl;
+	return imprimirRec(Raiz);
+
+}
+void ArbolP::imprimirRec(NodoA* aux)
+{
+	NodoA* a=aux;
+	for(int i=0;i<a->Hijos.size();++i)
+	{
+		std::cout<<a->Hijos[i]->getDato()<<" ";
+		std::cout<<"\t"<<" ";
+		imprimirRec(a->Hijos[i]);
+	}
 }

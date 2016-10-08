@@ -1,3 +1,9 @@
+/**
+Manzano Saturnino Daniel
+Mayett Guzman Rodrigo
+es muy parecido al de puzzel pero 
+hace un arbol y lo imprime
+*/
 #include <stack>
 #include "NodoA.h"
 

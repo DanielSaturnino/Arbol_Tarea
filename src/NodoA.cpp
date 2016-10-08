@@ -1,3 +1,7 @@
+/**
+Manzano Saturnino Daniel
+Mayett Guzman Rodrigo
+*/
 #include "NodoA.h"
 
 NodoA::NodoA(int Dato)

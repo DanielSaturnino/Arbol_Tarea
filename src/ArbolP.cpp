@@ -1,3 +1,7 @@
+/**
+Manzano Saturnino Daniel
+Mayett Guzman Rodrigo
+*/
 #include "ArbolP.h"
 
 ArbolP::ArbolP(int Dato)
@@ -112,7 +116,7 @@ void ArbolP::Crearder(int Dato)
 {
 	AddNodo(3,Dato);
 	AddNodo(6,3);
-	AddNodo(7,3);
+	AddNodo(7,3);	
 	AddNodo(10,3);
 }
 void ArbolP::imprimir()

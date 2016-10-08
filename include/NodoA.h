@@ -1,3 +1,8 @@
+/**
+Manzano Saturnino Daniel
+Mayett Guzman Rodrigo
+Clase para crear nodos de arboles
+*/
 #include <iostream>
 #include <vector>
 
